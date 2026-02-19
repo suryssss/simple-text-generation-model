@@ -11,7 +11,8 @@ print(text)
 
 words=text.split()
 vocab = sorted(set(words))
-vocab = ["<PAD>", "<UNK>"] + vocab
+#adding special tokens
+vocab = ["<PAD>", "<UNK"] + vocab
 
 print("Vocab size:", len(vocab))
 print(vocab)
@@ -25,6 +26,7 @@ UNK_IDX = words_to_idx["<UNK>"]
 
 s="i love ai"
 
+#tokenizing input sentence
 tokens=[words_to_idx[word] for word in s.split()]
 print(tokens)
 
